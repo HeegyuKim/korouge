@@ -3,9 +3,9 @@ original source code from https://github.com/google-research/google-research/tre
 
 기존 rouge_scorer는 알파벳과 숫자를 제외하고는 제거했기 때문에, tokenize.py 에서 해당 부분을 주석처리했습니다.
 
-<!-- ```
+```
 pip install korouge_score
-``` -->
+```
 
 ```python
 from korouge_score import rouge_scorer
