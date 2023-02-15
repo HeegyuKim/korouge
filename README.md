@@ -1,8 +1,9 @@
 # Rouge Implementation for Korean
 original source code from https://github.com/google-research/google-research/tree/master/rouge
 
-기존 rouge_scorer는 알파벳과 숫자를 제외하고는 제거했기 때문에, tokenize.py 에서 해당 부분을 주석처리했습니다.
-
+기존 rouge_scorer는 알파벳과 숫자를 제외하고는 제거했기 때문에 한국어로는 계산하려면 별도로 처리가 필요했습니다.
+tokenize.py 에서 해당 부분을 주석처리한 뒤 pypi로 새롭게 배포했습니다.
+따라서 불용어나 특수문자 제거, stemmer처리 등은 별도로 진행해야 합니다.
 ```
 pip install korouge_score
 ```
