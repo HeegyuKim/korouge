@@ -21,7 +21,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="korouge_score",
-    version="0.1.2",
+    version="0.1.3",
     author="Heegyu Kim",
     author_email="heekue83@gmail.com",
     description="Pure python implementation of ROUGE-1.5.5. for korean",

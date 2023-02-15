@@ -21,7 +21,7 @@ and overriding the tokenize() method.
 """
 import abc
 from nltk.stem import porter
-from . import tokenize
+from . import tokenize2
 
 
 class Tokenizer(abc.ABC):
@@ -48,4 +48,4 @@ class DefaultTokenizer(Tokenizer):
     self._stemmer = porter.PorterStemmer() if use_stemmer else None
 
   def tokenize(self, text):
-    return tokenize.tokenize(text, self._stemmer)
+    return tokenize2.tokenize(text, self._stemmer)

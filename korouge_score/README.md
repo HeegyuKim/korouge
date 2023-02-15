@@ -1,4 +1,4 @@
-# Python ROUGE Implementation
+# Python ROUGE Implementation (For Korean)
 
 ## Overview
 
@@ -72,18 +72,21 @@ python -m rouge.rouge \
 
 ## Using pip
 ```
-pip install -r rouge/requirements.txt
-pip install rouge-score
+pip install -r korouge_score/requirements.txt
+pip install korouge-score
 ```
 
 Then in python:
 
 ```python
-from rouge_score import rouge_scorer
+from korouge_score import rouge_scorer
 
-scorer = rouge_scorer.RougeScorer(['rouge1', 'rougeL'], use_stemmer=True)
-scores = scorer.score('The quick brown fox jumps over the lazy dog',
-                      'The quick brown dog jumps on the log.')
+scorer = rouge_scorer.RougeScorer(["rouge1", "rouge2", "rougeL", "rougeLsum"])
+
+ref = "안녕하세요 반가워요 오늘 뭐 먹을래요?"
+pred = "안녕 ㅋ 반가워 오늘 뭐 할래?"
+
+print(scorer.score(ref, pred))
 ```
 
 ## License
